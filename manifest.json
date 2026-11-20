@@ -1,0 +1,23 @@
+{
+  "name": "Jungle Jelly Rally",
+  "short_name": "JellyRally",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#87e0c2",
+  "theme_color": "#52be69",
+  "description": "30-stage stress-free cartoon racing game for kids with unlockable cars and jelly bounces.",
+  "icons": [
+    {
+      "src": "https://chanderkant819-art.github.io/jungle-jelly-rally/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://chanderkant819-art.github.io/jungle-jelly-rally/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

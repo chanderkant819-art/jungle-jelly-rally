@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Jungle Jelly Rally — 30 Stages</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Top HUD -->
+    <div id="hud">
+        <div class="left-hud">
+            <div class="hud-pill star-pill">
+                <span class="icon">⭐</span>
+                <span id="scoreText">0</span>
+            </div>
+            <div id="stageBadge" class="hud-pill stage-pill">Stage 1</div>
+        </div>
+
+        <div class="progress-wrap">
+            <div class="progress-track">
+                <div id="progressFill"></div>
+                <span id="progressCar">🚙</span>
+            </div>
+            <span class="goal-flag">🏁</span>
+        </div>
+
+        <div class="right-hud">
+            <button id="stageMenuBtn" class="hud-pill stage-switch-btn" title="30 Stages & Cars">🗺️</button>
+            <button id="muteBtn" class="hud-pill sound-btn" title="Sound On/Off">🔊</button>
+        </div>
+    </div>
+
+    <!-- Live Mini Challenge Banner -->
+    <div id="challengeBanner" class="challenge-banner hidden">
+        <span id="challengeIcon">🎯</span>
+        <span id="challengeText">Challenge: Collect 8 Stars!</span>
+    </div>
+
+    <!-- Start, 30-Stage Grid & Garage Selection Overlay -->
+    <div id="startOverlay" class="overlay">
+        <div class="modal-card wide-card">
+            <div class="badge">🌴 30 STAGES • KIDS EDITION 🌴</div>
+            <h1>Jungle Jelly Rally</h1>
+            <p>Complete mini-challenges to unlock new cars and race across 30 colorful stages!</p>
+
+            <div class="section-label">🗺️ SELECT STAGE (30 STAGES — UNLOCK IN ORDER)</div>
+            <div id="stagePicker" class="stage-picker-30"></div>
+
+            <div class="section-label">🚗 SELECT CAR (UNLOCK WITH CHALLENGES)</div>
+            <div id="carPicker" class="car-picker"></div>
+
+            <button id="startBtn" class="big-play-btn">▶ PLAY NOW</button>
+        </div>
+    </div>
+
+    <!-- Stage Clear Overlay -->
+    <div id="winOverlay" class="overlay hidden">
+        <div class="modal-card win-card">
+            <div class="badge">🎉 YAY! YOU DID IT! 🎉</div>
+            <h1 id="winTitle">STAGE 1 CLEAR!</h1>
+            <p class="final-stars">Stars Collected: <span id="finalScore">0</span> ⭐</p>
+            <p id="unlockNotice" class="unlock-notice hidden"></p>
+            <div class="win-actions">
+                <button id="nextStageBtn" class="big-play-btn next-btn">➡ NEXT STAGE</button>
+                <button id="garageBtn" class="big-play-btn garage-btn">🗺️ 30 STAGES / CARS</button>
+                <button id="replayBtn" class="big-play-btn secondary-btn">🔄 REPLAY</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Touch / Mouse Controls -->
+    <div id="controls">
+        <button id="jumpBtn" class="ctrl-btn jump-btn">
+            <span class="btn-emoji">💦</span>
+            <span>Jump</span>
+        </button>
+        <div class="right-controls">
+            <button id="gasBtn" class="ctrl-btn gas-btn">
+                <span class="btn-emoji">⚡</span>
+                <span>Gas</span>
+            </button>
+            <button id="boostBtn" class="ctrl-btn boost-btn" title="Turbo Boost">
+                <span>🚀</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
